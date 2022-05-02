@@ -1,12 +1,16 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import './styles';
+import {Button, View, Text} from 'react-native';
 import styles from './styles';
 
-function HomeScreen() {
+function HomeScreen({navigation}) {
     return (
         <View style = {styles.container}>
-            <Text>Home</Text>
+            <Text style={styles.text}>Home</Text>
+            <Button 
+                title="Go to Details" 
+                onPress={() => navigation.navigate("Details")} 
+            />
+            
         </View>
     );
 }
