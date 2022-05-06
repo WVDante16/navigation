@@ -4,11 +4,14 @@ import styles from './styles';
 
 function HomeScreen({navigation}) {
     return (
-        <View style = {styles.container}>
+        <View style={styles.container}>
             <Text style={styles.text}>Home</Text>
             <Button 
                 title="Go to Details" 
-                onPress={() => navigation.navigate("Details")} 
+                onPress={() => navigation.navigate('Details', {
+                    id: 1, 
+                    description: 'Aqui va la descripcion',
+                })} 
             />
             
         </View>
